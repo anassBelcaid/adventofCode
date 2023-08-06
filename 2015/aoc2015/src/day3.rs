@@ -52,4 +52,21 @@ fn main() {
         santa.change(direction);
     }
     println!("Part1 : {}", santa.cache.len());
+
+    // part2
+
+    let mut santa = Santa::new();
+    let mut robot = Santa::new();
+
+    for chunk in directions.as_bytes().chunks(2) {
+        // move santa
+        santa.change(chunk[0] as char);
+
+        // move its robot
+        robot.change(chunk[1] as char);
+    }
+
+    // compute the union between the two sets
+    let both: HashSet<_> = santa.cache.union(&robot.cache).collect();
+    println!("Part2 : {}", both.len());
 }
