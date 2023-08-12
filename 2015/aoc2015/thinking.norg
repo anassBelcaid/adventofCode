@@ -1,0 +1,9 @@
+* Thinking
+** Day 7 
+  Seriously a *cool* problem.
+  - (x) How to represent the operation structure
+  - (x) Some operations have a direct number ???
+    I will consider them a names, and fixed ther values.
+  - ( ) How to read an operation from the instruction.
+  - ( ) Do computation in a single 16 bits.
+
