@@ -1,5 +1,5 @@
-use crate::gates::Gate;
-use std::collections::{HashMap, LinkedList};
+use crate::gates::Network;
+use std::collections::LinkedList;
 use std::fs::File;
 use std::io::Read;
 mod gates;
@@ -10,46 +10,50 @@ fn main() {
 
     let mut file = File::open("input/day7").expect("Invalid baby file");
     // Content
-    let mut connexions = String::new();
+    let mut instructions = String::new();
 
-    file.read_to_string(&mut connexions)
+    file.read_to_string(&mut instructions)
         .expect("invalid content");
 
-    // let mut gates = Vec::new();
-    let mut gates = LinkedList::new();
-    let mut gate_values = HashMap::new();
+    // Creating the network
+    let mut network = Network::new();
 
-    for connexion in connexions.lines() {
-        let gate = Gate::from(connexion);
+    for instruction in instructions.lines() {
+        network.add_gate_from_insruction(instruction);
+    }
 
-        // known value
-        if gate.parents.is_empty() {
-            gate_values.insert(gate.name.clone(), gate.value);
-        } else {
-            gates.push_back(gate);
+    // now we group all the elements that could send their value
+    let mut new_nodes = LinkedList::new();
+    for (i, gate) in network.gates.iter().enumerate() {
+        if gate.value.is_some() {
+            new_nodes.push_back(i);
         }
     }
 
-    // transform all the numerical values to known values
-    for gate in gates.iter() {
-        for parent in gate.parents.iter() {
-            if parent.parse::<i32>().is_ok() {
-                gate_values.insert(parent.clone(), parent.parse::<u16>().unwrap());
-            }
+    // let the new nodes populate their values
+    network.populate_values(&mut new_nodes);
+
+    // populate the adjacency
+    let idx_a = network.name_idx["a"];
+    let answer1 = network.gates[idx_a].value.unwrap();
+    println!("part I = {}", answer1);
+
+    // now we compute the value of second part
+    let idx_b = network.name_idx["b"];
+    network.reset_all();
+    network.gates[idx_b].value = Some(answer1);
+    network.gates[idx_b].got_signal = true;
+
+    //
+    // this should be put into a function ???? since it repeated
+    new_nodes.clear();
+    for (i, gate) in network.gates.iter().enumerate() {
+        if gate.value.is_some() {
+            new_nodes.push_back(i);
         }
     }
-
-    while !gates.is_empty() {
-        let mut gate = gates.pop_front().unwrap();
-
-        if gate.all_known(&gate_values) {
-            gate.reduce(&mut gate_values);
-        } else {
-            gates.push_back(gate);
-        }
-    }
-
-    // filtering
-    let answer1 = gate_values["a"];
-    println!("part1 I = {}", answer1);
+    network.populate_values(&mut new_nodes);
+    //
+    let answer2 = network.gates[idx_a].value.unwrap();
+    println!("part I = {}", answer2);
 }

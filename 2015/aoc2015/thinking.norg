@@ -1,9 +1,18 @@
 * Thinking
 ** Day 7 
+  *** Part 1
   Seriously a *cool* problem.
   - (x) How to represent the operation structure
   - (x) Some operations have a direct number ???
     I will consider them a names, and fixed ther values.
-  - ( ) How to read an operation from the instruction.
-  - ( ) Do computation in a single 16 bits.
+  - (x) How to read an operation from the instruction.
+  - (x) Do computation in a single 16 bits.
+  *** Part2 
+  Now I need to rethink the whole process. Since I need to send all the data from b which will change and take the new value of *a*.
+
+---- ( ) I changed the formulation for each *gate* to have to *lock* but still I'm getting the wrong result.
+---- ( ) Need to check the meaning of the *reset* option in the text.
+---- ( ) I need to pay attention to the clause *a gate don't have a signal until all of its gates get a signal.
+
+
 
