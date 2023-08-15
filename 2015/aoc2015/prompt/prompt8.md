@@ -20,8 +20,26 @@ Disregarding the whitespace in the file, what is *the number of characters of co
 
 For example, given the four strings above, the total number of characters of string code (`2 + 5 + 10 + 6 = 23`) minus the total number of characters in memory for string values (`0 + 3 + 7 + 1 = 11`) is `23 - 11 = 12`.
 
-To begin, [get your puzzle input](8/input).
+Your puzzle answer was `1350`.
+
+The first half of this puzzle is complete! It provides one gold star: \*
+
+\--- Part Two ---
+----------
+
+Now, let's go the other way. In addition to finding the number of characters of code, you should now *encode each code representation as a new string* and find the number of characters of the new encoded representation, including the surrounding double quotes.
+
+For example:
+
+* `""` encodes to `"\"\""`, an increase from `2` characters to `6`.
+* `"abc"` encodes to `"\"abc\""`, an increase from `5` characters to `9`.
+* `"aaa\"aaa"` encodes to `"\"aaa\\\"aaa\""`, an increase from `10` characters to `16`.
+* `"\x27"` encodes to `"\"\\x27\""`, an increase from `6` characters to `11`.
+
+Your task is to find *the total number of characters to represent the newly encoded strings* minus *the number of characters of code in each original string literal*. For example, for the strings above, the total encoded length (`6 + 9 + 16 + 11 = 42`) minus the characters in the original code representation (`23`, just like in the first part of this puzzle) is `42 - 23 = 19`.
 
 Answer:
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Matchsticks%22+%2D+Day+8+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F8&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+Although it hasn't changed, you can still [get your puzzle input](8/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Matchsticks%22+%2D+Day+8+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F8&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.

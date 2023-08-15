@@ -32,6 +32,15 @@ pub fn num_chars(line: &str) -> i32 {
     count
 }
 
+fn encoded_len(c: char) -> i32 {
+    // function to compute the length to encode a giving character
+    if c == '\\' || c == '"' {
+        return 2;
+    } else {
+        return 1;
+    }
+}
+
 fn main() {
     // Reading the file
     let mut file = File::open("input/day8").expect("Invalid file");
@@ -59,4 +68,15 @@ fn main() {
 
     let answer1 = total_chars - total_memory;
     println!("part I = {answer1}");
+
+    // let compute the second part
+    let mut sum_encoded: i32 = 0;
+    for line in content.lines() {
+        // println!("{line}");
+        let m: i32 = line.chars().map(encoded_len).sum();
+        // println!("m = {} ", m + 2);
+        sum_encoded += m + 2; // the two for the additional ""
+    }
+    let answer2 = sum_encoded - total_chars;
+    println!("Part II = {answer2}");
 }
