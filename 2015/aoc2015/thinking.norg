@@ -7,12 +7,23 @@
     I will consider them a names, and fixed ther values.
   - (x) How to read an operation from the instruction.
   - (x) Do computation in a single 16 bits.
-  *** Part2 
+  *** ( ) Part2 
   Now I need to rethink the whole process. Since I need to send all the data from b which will change and take the new value of *a*.
 
----- ( ) I changed the formulation for each *gate* to have to *lock* but still I'm getting the wrong result.
----- ( ) Need to check the meaning of the *reset* option in the text.
----- ( ) I need to pay attention to the clause *a gate don't have a signal until all of its gates get a signal.
+---- (x) I changed the formulation for each *gate* to have to *lock* but still I'm getting the wrong result.
+---- (x) Need to check the meaning of the *reset* option in the text.
+---- (x) I need to pay attention to the clause *a gate don't have a signal until all of its gates get a signal.
+
+** Day 8 
+
+ - I wanted to force the loading to correctly represent the strings, but end up writing simple function to compute the characters.
+
+ ** Day 9
+
+ - ( ) Represent the cities topologies.
+   I will represent the graph with a hashmap and string.
+ - ( ) Function to solve the problme
+
 
 
 
