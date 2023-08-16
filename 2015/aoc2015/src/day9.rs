@@ -76,6 +76,34 @@ fn shortest_path_from(
     }
 }
 
+fn longest_path_from(
+    network: &Network,
+    index: usize,
+    visited: &mut Vec<bool>,
+    current_dist: i32,
+    max_path: &mut i32,
+) {
+    // function to compute the shortest path starting from index
+    // the function will use the concept of backtracking in order
+    // to consider all the roads
+    visited[index] = true;
+
+    if visited.iter().all(|x| *x) {
+        *max_path = (*max_path).max(current_dist);
+        return;
+    }
+
+    // we still have some town to visit
+    // we mark the current node as visited
+    for edge in network.adj[index].iter() {
+        let j = edge.0;
+        let dist = edge.1;
+        if !visited[j] {
+            longest_path_from(network, j, visited, current_dist + dist, max_path);
+            visited[j] = false;
+        }
+    }
+}
 fn shortest_path(network: &Network) -> i32 {
     let mut min_path = i32::MAX;
     let n = network.adj.len();
@@ -86,6 +114,18 @@ fn shortest_path(network: &Network) -> i32 {
         visited[i] = false;
     }
     return min_path;
+}
+
+fn longest_path(network: &Network) -> i32 {
+    let mut max_path = i32::MIN;
+    let n = network.adj.len();
+
+    let mut visited = vec![false; n];
+    for i in 0..n {
+        longest_path_from(network, i, &mut visited, 0, &mut max_path);
+        visited[i] = false;
+    }
+    return max_path;
 }
 
 fn main() {
@@ -105,4 +145,7 @@ fn main() {
 
     let answer1 = shortest_path(&network);
     println!("Part I = {answer1}");
+
+    let answer2 = longest_path(&network);
+    println!("Part II = {answer2}");
 }

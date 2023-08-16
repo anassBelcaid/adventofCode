@@ -30,8 +30,23 @@ The shortest of these is `London -> Dublin -> Belfast = 605`, and so the answer 
 
 What is the distance of the shortest route?
 
-To begin, [get your puzzle input](9/input).
+Your puzzle answer was `251`.
+
+The first half of this puzzle is complete! It provides one gold star: \*
+
+\--- Part Two ---
+----------
+
+The next year, just to show off, Santa decides to take the route with the *longest distance* instead.
+
+He can still start and end at any two (different) locations he wants, and he still must visit each location exactly once.
+
+For example, given the distances above, the longest route would be `982` via (for example) `Dublin -> London -> Belfast`.
+
+What is the distance of the longest route?
 
 Answer:
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22All+in+a+Single+Night%22+%2D+Day+9+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F9&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+Although it hasn't changed, you can still [get your puzzle input](9/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22All+in+a+Single+Night%22+%2D+Day+9+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F9&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
