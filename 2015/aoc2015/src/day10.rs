@@ -41,4 +41,10 @@ fn main() {
     }
     let answer1 = value.len();
     println!("Part I = {answer1}");
+
+    for _ in 0..10 {
+        value = look_and_say(&value);
+    }
+    let answer2 = value.len();
+    println!("Part II = {answer2}");
 }

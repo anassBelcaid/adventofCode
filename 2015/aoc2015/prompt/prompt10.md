@@ -15,8 +15,19 @@ For example:
 
 Starting with the digits in your puzzle input, apply this process 40 times. What is *the length of the result*?
 
-Your puzzle input is `1321131112`.
+Your puzzle answer was `492982`.
+
+The first half of this puzzle is complete! It provides one gold star: \*
+
+\--- Part Two ---
+----------
+
+Neat, right? You might also enjoy hearing [John Conway talking about this sequence](https://www.youtube.com/watch?v=ea7lJkEhytA) (that's Conway of *Conway's Game of Life* fame).
+
+Now, starting again with the digits in your puzzle input, apply this process *50* times. What is *the length of the new result*?
 
 Answer:
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Elves+Look%2C+Elves+Say%22+%2D+Day+10+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F10&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+Your puzzle input is still `1321131112`.
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Elves+Look%2C+Elves+Say%22+%2D+Day+10+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F10&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
