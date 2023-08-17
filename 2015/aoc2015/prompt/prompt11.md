@@ -3,7 +3,7 @@
 
 Santa's previous password expired, and he needs help choosing a new one.
 
-To help him remember his new password after the old one expires, Santa has devised a method of coming up with a password based on the previous one. Corporate policy dictates that passwords must be exactly *eight* lowercase letters (for security reasons), so he finds his new password by *incrementing* his old password string repeatedly until it is valid.
+To help him remember his new password after the old one expires, Santa has devised a method of coming up with a password based on the previous one. Corporate policy dictates that passwords must be exactly eight lowercase letters (for security reasons), so he finds his new password by *incrementing* his old password string repeatedly until it is valid.
 
 Incrementing is just like counting with numbers: `xx`, `xy`, `xz`, `ya`, `yb`, and so on. Increase the rightmost letter one step; if it was `z`, it wraps around to `a`, and repeat with the next letter to the left until one doesn't wrap around.
 
@@ -23,8 +23,19 @@ For example:
 
 Given Santa's current password (your puzzle input), what should his *next password* be?
 
-Your puzzle input is `hepxcrrq`.
+Your puzzle answer was `hepxxyzz`.
 
-Answer:
+\--- Part Two ---
+----------
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Corporate+Policy%22+%2D+Day+11+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F11&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+Santa's password expired again. What's the next one?
+
+Your puzzle answer was `heqaabcc`.
+
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
+
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+Your puzzle input was `hepxcrrq`.
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Corporate+Policy%22+%2D+Day+11+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F11&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.

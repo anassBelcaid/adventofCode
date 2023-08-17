@@ -91,6 +91,12 @@ fn main() {
     // computing the first answer
     let answer1 = next_password(&mut pass);
     println!("Part I {answer1}");
+
+    // computing part 2
+    pass = Password::new(&pass.string());
+
+    let answer2 = next_password(&mut pass);
+    println!("Part II {answer2}");
 }
 
 #[test]
