@@ -72,7 +72,8 @@ impl Network {
         result
     }
 
-    fn sitting_score(&self, places: &Vec<usize>, adjacency: &Vec<Vec<i32>>) -> i32 {
+    #[inline]
+    fn sitting_score(places: &Vec<usize>, adjacency: &Vec<Vec<i32>>) -> i32 {
         // function to compute the score of a sitting index by places
         let mut sum = 0;
 
@@ -89,24 +90,22 @@ impl Network {
         }
         sum
     }
+}
 
-    fn best_sitting(&self) -> i32 {
-        // compute the best sitting for the network
-        let n = self.adj.len();
+fn best_sitting(adjacency: &Vec<Vec<i32>>) -> i32 {
+    // compute the best sitting for the network
+    let n = adjacency.len();
 
-        let adjacency = self.get_adj_matrix();
+    let mut sitting: Vec<usize> = (0..n).collect();
 
-        let mut sitting: Vec<usize> = (0..n).collect();
+    let mut answer = Network::sitting_score(&sitting, &adjacency);
 
-        let mut answer = self.sitting_score(&sitting, &adjacency);
-
-        while sitting.next_permutation() {
-            // update the best sitting
-            let val = self.sitting_score(&sitting, &adjacency);
-            answer = answer.max(val);
-        }
-        answer
+    while sitting.next_permutation() {
+        // update the best sitting
+        let val = Network::sitting_score(&sitting, &adjacency);
+        answer = answer.max(val);
     }
+    answer
 }
 
 fn main() {
@@ -126,6 +125,20 @@ fn main() {
         network.add_instruction(line);
     }
 
-    let answer1 = network.best_sitting();
+    // compute the adjacency
+    let mut adjacency = network.get_adj_matrix();
+
+    let answer1 = best_sitting(&adjacency);
     println!("Part I = {answer1}");
+
+    // now we remove the adjacency by adding ourselves
+    let n = adjacency.len();
+
+    for line in adjacency.iter_mut() {
+        line.push(0);
+    }
+    adjacency.push(vec![0; n + 1]);
+
+    let answer2 = best_sitting(&adjacency);
+    println!("Part II = {answer2}");
 }

@@ -40,8 +40,23 @@ After trying every other seating arrangement in this hypothetical scenario, you 
 
 What is the *total change in happiness* for the optimal seating arrangement of the actual guest list?
 
-To begin, [get your puzzle input](13/input).
+Your puzzle answer was `618`.
 
-Answer:
+\--- Part Two ---
+----------
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Knights+of+the+Dinner+Table%22+%2D+Day+13+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F13&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+In all the commotion, you realize that you forgot to seat yourself. At this point, you're pretty apathetic toward the whole thing, and your happiness wouldn't really go up or down regardless of who you sit next to. You assume everyone else would be just as ambivalent about sitting next to you, too.
+
+So, add yourself to the list, and give all happiness relationships that involve you a score of `0`.
+
+What is the *total change in happiness* for the optimal seating arrangement that actually includes yourself?
+
+Your puzzle answer was `601`.
+
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
+
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](13/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Knights+of+the+Dinner+Table%22+%2D+Day+13+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F13&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
