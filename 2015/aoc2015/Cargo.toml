@@ -9,6 +9,7 @@ edition = "2021"
 md5 = "0.7.0"
 fancy-regex = "0.11.0"
 serde_json = "1.0.105"
+permutohedron = "0.2.4"
 
 [[bin]]
 name='day1'
@@ -57,3 +58,7 @@ path = 'src/day11.rs'
 [[bin]]
 name = 'day12'
 path = 'src/day12.rs'
+
+[[bin]]
+name = 'day13'
+path = 'src/day13.rs'
