@@ -8,6 +8,7 @@ struct Reinder {
     fly_time: u32,  // time to rest
     rest_time: u32, // rest time
     position: u32,
+    points: u32, // gained points
     // state of the reinder time for either the running staete (positive number ,
     // or negative number representing the time to complete the rest)
     state: i32,
@@ -23,6 +24,7 @@ impl Reinder {
             rest_time,
             state: fly_time as i32,
             position: 0,
+            points: 0,
         }
     }
 
@@ -56,6 +58,7 @@ impl Reinder {
         }
     }
 }
+
 fn main() {
     let mut file = File::open("input/day14").expect("invalid file");
 
@@ -76,4 +79,31 @@ fn main() {
 
     let answer1 = reinders.iter().map(|x| x.position).max().unwrap();
     println!("part I = {answer1}");
+
+    // part II
+    reinders.clear();
+    for line in lines.lines() {
+        reinders.push(Reinder::from(line));
+    }
+
+    // preparing for part2
+    for _ in 0..2503 {
+        for reinder in reinders.iter_mut() {
+            reinder.step();
+
+            // computing the max distance to give points
+        }
+
+        let max_dis = reinders.iter().map(|x| x.position).max().unwrap();
+
+        // Giving the point to each reinder in the first position
+        for reinder in reinders.iter_mut() {
+            if reinder.position == max_dis {
+                reinder.points += 1;
+            }
+        }
+    }
+
+    let answer2 = reinders.iter().map(|x| x.points).max().unwrap();
+    println!("Part II = {answer2}");
 }
