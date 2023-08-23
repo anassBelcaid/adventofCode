@@ -32,8 +32,23 @@ Multiplying these together (`68 * 80 * 152 * 76`, ignoring `calories` for now) r
 
 Given the ingredients in your kitchen and their properties, what is the *total score* of the highest-scoring cookie you can make?
 
-To begin, [get your puzzle input](15/input).
+Your puzzle answer was `21367368`.
 
-Answer:
+\--- Part Two ---
+----------
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Science+for+Hungry+People%22+%2D+Day+15+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F15&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+Your cookie recipe becomes wildly popular! Someone asks if you can make another recipe that has exactly `500` calories per cookie (so they can use it as a meal replacement). Keep the rest of your award-winning process the same (100 teaspoons, same ingredients, same scoring system).
+
+For example, given the ingredients above, if you had instead selected `40` teaspoons of butterscotch and `60` teaspoons of cinnamon (which still adds to `100`), the total calorie count would be `40*8 + 60*3 = 500`. The total score would go down, though: only `57600000`, the best you can do in such trying circumstances.
+
+Given the ingredients in your kitchen and their properties, what is the *total score* of the highest-scoring cookie you can make with a calorie total of `500`?
+
+Your puzzle answer was `1766400`.
+
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
+
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](15/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Science+for+Hungry+People%22+%2D+Day+15+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F15&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
