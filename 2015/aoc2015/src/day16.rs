@@ -18,6 +18,8 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::Read;
 
+type Aunt = Vec<Option<i32>>;
+
 pub fn create_feature_idx() -> HashMap<String, usize> {
     let features = vec![
         "children",
@@ -68,19 +70,69 @@ fn read_aunt(line: &str, feat_idx: &HashMap<String, usize>) -> Vec<Option<i32>> 
 }
 
 // should wrap those in type for avoiding repeating the same type
-fn distance(left: &Vec<Option<i32>>, right: &Vec<Option<i32>>) -> f64 {
-    let mut distance = 0f64;
-
+fn match1(left: &Vec<Option<i32>>, right: &Vec<Option<i32>>) -> bool {
     for (a, b) in left.iter().zip(right) {
         if a.is_some() && b.is_some() {
-            let diff = distance += (a.unwrap() as f64 - b.unwrap() as f64).powi(2);
+            if a.unwrap() != b.unwrap() {
+                return false;
+            }
         }
     }
-    distance.sqrt()
+    true
+}
+
+// should wrap those in type for avoiding repeating the same type
+fn match2(elem: &Vec<Option<i32>>, gt: &Vec<Option<i32>>) -> bool {
+    // matching with elem agains tthe ground truth gt
+
+    for (i, (a, b)) in elem.iter().zip(gt).enumerate() {
+        if a.is_some() && b.is_some() {
+            let a = a.unwrap();
+            let b = b.unwrap();
+            match i {
+                1 | 7 => {
+                    if a <= b {
+                        return false;
+                    }
+                } // cats and trees greater than that many
+                3 | 6 => {
+                    if a >= b {
+                        return false;
+                    }
+                } // pomeranians and goldfish  less that that
+                _ => {
+                    if a != b {
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+    true
+}
+
+fn part1(aunts: &Vec<Aunt>, signature: &Aunt) -> usize {
+    // Get the indice of the aunt that match the signature
+    for (i, aunt) in aunts.iter().enumerate() {
+        if match1(aunt, signature) {
+            return i + 1;
+        }
+    }
+    0
+}
+
+fn part2(aunts: &Vec<Aunt>, signature: &Aunt) -> usize {
+    // Get the indice of the aunt that match the signature
+    for (i, aunt) in aunts.iter().enumerate() {
+        if match2(aunt, signature) {
+            return i + 1;
+        }
+    }
+    0
 }
 fn main() {
     // Input feature
-    let detected = vec![
+    let signature = vec![
         Some(3),
         Some(7),
         Some(2),
@@ -102,20 +154,17 @@ fn main() {
     // Creating the fature index
     let feat_idx = create_feature_idx();
 
-    let mut distances = Vec::new();
+    let mut aunts = Vec::new();
     for line in content.lines() {
         let aunt = read_aunt(&line, &feat_idx);
-        distances.push(distance(&aunt, &detected));
+        aunts.push(aunt);
     }
 
-    let mut idx = 0usize;
+    // begin partI
+    let answer1 = part1(&aunts, &signature);
+    println!("Part I = {answer1} ");
 
-    for i in 1..distances.len() {
-        if distances[i] < distances[idx] {
-            idx = i;
-        }
-    }
-
-    let answer1 = idx + 1;
-    println!("Part I = {answer1}");
+    // begin Part II
+    let answer2 = part2(&aunts, &signature);
+    println!("Part II = {answer2} ");
 }
