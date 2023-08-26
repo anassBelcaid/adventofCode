@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+use std::collections::VecDeque;
 use std::fs::File;
 use std::io::Read;
 
@@ -45,6 +47,54 @@ fn num_combinations(target: usize, capacities: &Vec<usize>) -> i32 {
     return val;
 }
 
+fn num_combinations_with_min_containers(target: usize, capacities: &Vec<usize>) -> i32 {
+    // function to compute the number of ways to get the sum while using
+    // the minimum number of containers
+
+    // first we don't have any path
+    let mut min_move = None;
+    let mut result = 0;
+
+    let n = capacities.len();
+
+    // we initiate the dfs to seach for the combination and also the number of moves
+    struct Elem(usize, usize, usize); // target, index of the search and number of moves
+    let mut queue = VecDeque::new();
+
+    // First we are searching the target element using all indices with 0 moves
+    queue.push_front(Elem(target, n, 0));
+
+    while !queue.is_empty() {
+        // getting the element
+        let e = queue.pop_front().unwrap();
+
+        // check if we have a goal
+        if e.0 == 0 {
+            match min_move {
+                None => {
+                    min_move = Some(e.2);
+                    result += 1;
+                }
+                Some(v) => {
+                    if e.2 == v {
+                        result += 1;
+                    }
+                }
+            }
+        } else {
+            for i in (0..e.1).rev() {
+                if e.0 >= capacities[i] {
+                    // computing the new capacitiy
+                    let v = e.0 - capacities[i];
+                    queue.push_back(Elem(v, i, e.2 + 1));
+                }
+            }
+        }
+    }
+
+    result
+}
+
 fn main() {
     let mut file = File::open("input/day17").expect("Invalid file");
 
@@ -58,4 +108,8 @@ fn main() {
 
     let answer1 = num_combinations(target, &capacities);
     println!("Part I = {answer1}");
+
+    // let start part II
+    let answer2 = num_combinations_with_min_containers(target, &capacities);
+    println!("Part II = {answer2}");
 }
