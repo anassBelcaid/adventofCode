@@ -79,8 +79,6 @@ In your grid of 100x100 lights, given your initial configuration, *how many ligh
 
 Your puzzle answer was `821`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -141,8 +139,12 @@ After `5` steps, this example now has `17` lights on.
 
 In your grid of 100x100 lights, given your initial configuration, but with the four corners always in the *on* state, *how many lights are on after 100 steps*?
 
-Answer:
+Your puzzle answer was `886`.
 
-Although it hasn't changed, you can still [get your puzzle input](18/input).
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Like+a+GIF+For+Your+Yard%22+%2D+Day+18+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F18&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](18/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Like+a+GIF+For+Your+Yard%22+%2D+Day+18+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F18&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.

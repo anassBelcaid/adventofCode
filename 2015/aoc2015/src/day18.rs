@@ -103,6 +103,68 @@ impl Grid {
             self.grid[pos.0][pos.1] = val;
         }
     }
+
+    fn is_corner(&self, p: &Position) -> bool {
+        // function to check if a position is in the corner
+        if p.0 == 0 && p.1 == 0 {
+            return true;
+        }
+
+        if p.0 == 0 && p.1 == self.grid[0].len() - 1 {
+            return true;
+        }
+
+        if p.0 == self.grid.len() - 1 && p.1 == 0 {
+            return true;
+        }
+
+        if p.0 == self.grid.len() - 1 && p.1 == self.grid[0].len() - 1 {
+            return true;
+        }
+
+        false
+    }
+
+    fn next2(&mut self) {
+        // function to apply the logic behind and the lights and give the next state
+        // second part of the game
+
+        // we will use a queue of values to change in order to avoid copying the matrix
+        let mut states = Vec::new(); // Vector for the position that need to be changed
+        let mut values = Vec::new(); // the new value for each changed state
+
+        for i in 0..self.grid.len() {
+            for j in 0..self.grid[0].len() {
+                // Getting the position
+                let p = Position(i, j);
+
+                // Getting the number of on lights
+                let n = self.num_on(&p);
+
+                //  getting the value of the light
+                let v = self.grid[i][j];
+
+                // case for a ligth on to off
+                if v == ON && n != 2 && n != 3 {
+                    if !self.is_corner(&p) {
+                        states.push(Position(i, j));
+                        values.push(OFF);
+                    }
+                }
+
+                // case for light to switch from off to on
+                if v == OFF && n == 3 {
+                    states.push(Position(i, j));
+                    values.push(ON);
+                }
+            }
+        }
+
+        // now we modify the values on the grid
+        for (pos, val) in states.iter().zip(values) {
+            self.grid[pos.0][pos.1] = val;
+        }
+    }
 }
 
 impl Display for Grid {
@@ -126,6 +188,22 @@ fn part1(grid: &mut Grid) -> usize {
     }
     grid.num_on_lights()
 }
+
+fn part2(grid: &mut Grid) -> usize {
+    // advance the sate for a number of iterations
+    let n = grid.grid.len();
+    let m = grid.grid[0].len();
+    let cx: Vec<usize> = vec![0, n - 1, 0, n - 1];
+    let cy: Vec<usize> = vec![0, 0, m - 1, m - 1];
+    for (x, y) in cx.iter().zip(cy.iter()) {
+        grid.grid[*x][*y] = ON;
+    }
+    for _i in 0..100 {
+        grid.next2();
+    }
+    // println!("{grid}");
+    grid.num_on_lights()
+}
 fn main() {
     // Should be given to a lib helper function
     let mut file = File::open("input/day18").expect("invalid content");
@@ -139,4 +217,15 @@ fn main() {
     // let's test the number of on lights
     let answer1 = part1(&mut grid);
     println!("Part I = {answer1}");
+
+    // let answer part II
+    let mut file = File::open("input/day18").expect("invalid content");
+
+    let mut content = String::new();
+    file.read_to_string(&mut content).expect("invalid content");
+
+    // let's first load the grid from the content
+    let mut grid = Grid::new(content);
+    let answer2 = part2(&mut grid);
+    println!("Part II = {answer2}");
 }
