@@ -34,8 +34,6 @@ Your puzzle input describes all of the possible replacements and, at the bottom,
 
 Your puzzle answer was `535`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -64,8 +62,12 @@ So, you could make `HOH` after *`3` steps*. Santa's favorite molecule, `HOHOHO`,
 
 How long will it take to make the medicine? Given the available *replacements* and the *medicine molecule* in your puzzle input, what is the *fewest number of steps* to go from `e` to the medicine molecule?
 
-Answer:
+Your puzzle answer was `212`.
 
-Although it hasn't changed, you can still [get your puzzle input](19/input).
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Medicine+for+Rudolph%22+%2D+Day+19+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F19&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](19/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Medicine+for+Rudolph%22+%2D+Day+19+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F19&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
