@@ -32,8 +32,6 @@ What is the *lowest house number* of the house to get at least as many presents 
 
 Your puzzle answer was `786240`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -41,8 +39,12 @@ The Elves decide they don't want to visit an infinite number of houses. Instead,
 
 With these changes, what is the new *lowest house number* of the house to get at least as many presents as the number in your puzzle input?
 
-Answer:
+Your puzzle answer was `831600`.
 
-Your puzzle input is still `34000000`.
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Infinite+Elves+and+Infinite+Houses%22+%2D+Day+20+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F20&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+Your puzzle input was `34000000`.
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Infinite+Elves+and+Infinite+Houses%22+%2D+Day+20+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F20&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.

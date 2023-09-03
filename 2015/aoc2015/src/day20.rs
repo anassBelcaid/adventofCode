@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::Read;
 
@@ -69,6 +70,30 @@ fn part1(target: usize) -> usize {
         candidate += 1;
     }
 }
+
+fn part2(target: usize) -> usize {
+    // fnction to return teh smallest numbe got a leaste [target] sum
+
+    let mut seen: HashMap<i64, usize> = HashMap::new();
+
+    let mut candidate = 2;
+
+    loop {
+        let divs = divisors(candidate);
+
+        for div in divs.iter() {
+            *seen.entry(*div).or_default() += 1;
+        }
+
+        let sum_divs = divs.iter().filter(|&x| seen[x] <= 50usize).sum::<i64>() * 11;
+
+        if sum_divs >= target as i64 {
+            return candidate as usize;
+        }
+
+        candidate += 1;
+    }
+}
 pub fn main() {
     // Creating the structure to read the file
     let mut file = File::open("input/day20").expect("invalid file");
@@ -80,6 +105,10 @@ pub fn main() {
     // let target = 150;
 
     // counting the first answer
-    let answer1 = part1(target);
-    println!("Part I = {answer1}");
+    // let answer1 = part1(target);
+    // println!("Part I = {answer1}");
+
+    // counting part 2
+    let answer2 = part2(target);
+    println!("Part II = {answer2}");
 }
