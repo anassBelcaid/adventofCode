@@ -24,6 +24,16 @@
    I will represent the graph with a hashmap and string.
  - ( ) Function to solve the problme
 
+** Day 21
+
+   - (x) implement the equipement
+   - (x) Class (struct) shop to have all the equipement
+   - (x) Simulate the contrainst of a player choice.
+   -- (x) Each hit reduce the health of the oponent at least by one.
+   -- (x) You have 100 hit points
+   -- (x) I need to generate all the permutations of [[0..=n], [0..=m], [cn(2,l)]]
+   - ( ) Simulate a single game once armor is chosen.
+   - ( ) Loop to choose the best armor.
 
 
 
