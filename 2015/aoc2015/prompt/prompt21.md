@@ -54,8 +54,6 @@ You have *100 hit points*. The boss's actual stats are in your puzzle input. Wha
 
 Your puzzle answer was `121`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -63,8 +61,12 @@ Turns out the shopkeeper is working with the boss, and can persuade you to buy w
 
 What is the *most* amount of gold you can spend and still *lose* the fight?
 
-Answer:
+Your puzzle answer was `201`.
 
-Although it hasn't changed, you can still [get your puzzle input](21/input).
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22RPG+Simulator+20XX%22+%2D+Day+21+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F21&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](21/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22RPG+Simulator+20XX%22+%2D+Day+21+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F21&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.

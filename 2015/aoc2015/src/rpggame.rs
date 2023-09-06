@@ -107,6 +107,7 @@ impl Player {
         if i != -1 {
             let i = i as usize;
             damage += shop.weapons[i].damage;
+            armor += shop.weapons[i].armor;
             cost += shop.weapons[i].cost;
         }
 
@@ -114,6 +115,7 @@ impl Player {
 
         if j != -1 {
             let j = j as usize;
+            damage += shop.armors[j].damage;
             armor += shop.armors[j].armor;
             cost += shop.armors[j].cost;
         }
