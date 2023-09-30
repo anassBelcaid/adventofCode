@@ -1,6 +1,7 @@
 // module for storing the state of the game.
 use std::collections::{BinaryHeap, HashSet};
 static BOSS_DAMAGE: i32 = 9;
+static mut HARD_MODE: bool = false; // static value to change for the mode
 
 #[derive(Debug, Eq, PartialEq, Clone, Hash)]
 pub struct GameState {
@@ -12,6 +13,13 @@ pub struct GameState {
     pub poison: i32,
     pub recharge: i32,
     pub used_mana: i32,
+}
+
+pub fn set_hard_mode(option: bool) {
+    // set the the hard mode API
+    unsafe {
+        HARD_MODE = option;
+    }
 }
 
 // implementing the order on the used mana
@@ -76,6 +84,16 @@ pub fn cast_poison(state: &GameState) -> Option<GameState> {
 
     let mut s = state.clone();
 
+    // hard mode
+    unsafe {
+        if HARD_MODE {
+            s.hits -= 1;
+            if s.hits <= 0 {
+                return None;
+            }
+        }
+    }
+
     poison_effect(&mut s);
     recharge_effect(&mut s);
     shield_effect(&mut s);
@@ -98,6 +116,13 @@ pub fn boss_attack(state: &GameState) -> Option<GameState> {
     recharge_effect(&mut s);
     shield_effect(&mut s);
 
+    // hard mode
+    unsafe {
+        if HARD_MODE {
+            s.hits -= 1;
+        }
+    }
+
     // now the boss attach ( he has to survive the effects)
     if s.boss > 0 {
         // compute the the player armor which depends on the shield
@@ -112,6 +137,16 @@ pub fn boss_attack(state: &GameState) -> Option<GameState> {
 pub fn magic_missile(state: &GameState) -> Option<GameState> {
     // transition state if the player casts magic missile
     let mut s = state.clone();
+
+    // hard mode
+    unsafe {
+        if HARD_MODE {
+            s.hits -= 1;
+            if s.hits <= 0 {
+                return None;
+            }
+        }
+    }
 
     // apply the effect
     poison_effect(&mut s);
@@ -139,6 +174,16 @@ pub fn drain(state: &GameState) -> Option<GameState> {
     // function to apply the drain effect
     let mut s = state.clone();
 
+    // hard mode
+    unsafe {
+        if HARD_MODE {
+            s.hits -= 1;
+            if s.hits <= 0 {
+                return None;
+            }
+        }
+    }
+
     // apply the effect
     poison_effect(&mut s);
     recharge_effect(&mut s);
@@ -165,6 +210,16 @@ pub fn shield(state: &GameState) -> Option<GameState> {
 
     let mut s = state.clone();
 
+    // hard mode
+    unsafe {
+        if HARD_MODE {
+            s.hits -= 1;
+            if s.hits <= 0 {
+                return None;
+            }
+        }
+    }
+
     // Apply the effects
     poison_effect(&mut s);
     recharge_effect(&mut s);
@@ -188,6 +243,16 @@ pub fn poison(state: &GameState) -> Option<GameState> {
     // function to apply the poison effect
     let mut s = state.clone();
 
+    // hard mode
+    unsafe {
+        if HARD_MODE {
+            s.hits -= 1;
+            if s.hits <= 0 {
+                return None;
+            }
+        }
+    }
+
     poison_effect(&mut s);
     recharge_effect(&mut s);
     shield_effect(&mut s);
@@ -210,6 +275,16 @@ pub fn recharge(state: &GameState) -> Option<GameState> {
     // function to check if we could apply the
 
     let mut s = state.clone();
+
+    // hard mode
+    unsafe {
+        if HARD_MODE {
+            s.hits -= 1;
+            if s.hits <= 0 {
+                return None;
+            }
+        }
+    }
 
     // applying the effects
     poison_effect(&mut s);

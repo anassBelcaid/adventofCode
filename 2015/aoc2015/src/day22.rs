@@ -13,4 +13,9 @@ pub fn main() {
 
     let answer1 = ucs(&state);
     println!("answer1 = {answer1}");
+
+    // in order to get the second answer we need the change the option hard-mode
+    rpggamemagic::set_hard_mode(true);
+    let answer2 = ucs(&state);
+    println!("answer2 = {answer2}");
 }
