@@ -240,6 +240,15 @@ pub fn main() {
     while index >= 0 && index < n {
         index = actions[index as usize].apply(&mut a, &mut b);
     }
+    println!(" part1 is {b}");
 
-    println!("answer part1 is {b}");
+    // part 2
+    a = 1;
+    b = 0;
+    index = 0;
+
+    while index >= 0 && index < n {
+        index = actions[index as usize].apply(&mut a, &mut b);
+    }
+    println!("part2 is {b}");
 }
