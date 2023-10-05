@@ -17,7 +17,7 @@ fn get_weights() -> Vec<i32> {
     result
 }
 
-fn part_i() -> i64 {
+fn split(num_component: i32) -> i64 {
     // function to comute the first part
 
     // Getting the weights
@@ -25,7 +25,7 @@ fn part_i() -> i64 {
     let n = weights.len();
 
     // Getting the target sum
-    let target: i32 = weights.iter().sum::<i32>() / 3;
+    let target: i32 = weights.iter().sum::<i32>() / num_component;
 
     // now print the combination
     // Let's try to solve the problem with a fixed combination size
@@ -48,6 +48,9 @@ fn part_i() -> i64 {
     0
 }
 pub fn main() {
-    let answer1 = part_i();
+    let answer1 = split(3);
     println!("Part I = {answer1}");
+
+    let answer2 = split(4);
+    println!("Part II = {answer2}");
 }

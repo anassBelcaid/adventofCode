@@ -37,8 +37,6 @@ What is the *quantum entanglement* of the first group of packages in the ideal c
 
 Your puzzle answer was `10439961859`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -65,8 +63,12 @@ Of these, there are three arrangements that put the minimum (two) number of pack
 
 Now, what is the *quantum entanglement* of the first group of packages in the ideal configuration?
 
-Answer:
+Your puzzle answer was `72050269`.
 
-Although it hasn't changed, you can still [get your puzzle input](24/input).
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22It+Hangs+in+the+Balance%22+%2D+Day+24+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F24&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2015) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](24/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22It+Hangs+in+the+Balance%22+%2D+Day+24+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F24&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
