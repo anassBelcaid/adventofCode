@@ -51,8 +51,19 @@ So, to find the second code (which ends up in row `2`, column `1`), start with t
 
 Santa looks nervous. Your puzzle input contains the message on the machine's console. *What code do you give the machine?*
 
-To begin, [get your puzzle input](25/input).
+Your puzzle answer was `8997277`.
 
-Answer:
+The first half of this puzzle is complete! It provides one gold star: \*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Let+It+Snow%22+%2D+Day+25+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F25&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+\--- Part Two ---
+----------
+
+The machine springs to life, then falls silent again. It beeps. "Insufficient fuel", the console reads. "*Fifty stars* are required before proceeding. *One star* is available."
+
+..."one star is available"? You check the fuel tank; sure enough, a lone star sits at the bottom, awaiting its friends. Looks like you need to provide 49 yourself.
+
+You have enough stars to .
+
+Although it hasn't changed, you can still [get your puzzle input](25/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Let+It+Snow%22+%2D+Day+25+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F25&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
