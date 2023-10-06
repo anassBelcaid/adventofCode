@@ -39,6 +39,12 @@ pub fn main() {
     //
 
     // getting the initial value
-    let value = get_value(index);
+    let mut value = get_value(index);
     println!("part I = {value}");
+
+    // for the second part I think I need to answer with the next 49 values
+    for _i in 0..49 {
+        value = get_next_value(value);
+    }
+    println!("part II = {value}");
 }

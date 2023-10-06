@@ -1,3 +1,5 @@
+article \*[title]{border-bottom:1px dotted #ffff66;}
+
 \--- Day 25: Let It Snow ---
 ----------
 
@@ -53,8 +55,6 @@ Santa looks nervous. Your puzzle input contains the message on the machine's con
 
 Your puzzle answer was `8997277`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -62,8 +62,12 @@ The machine springs to life, then falls silent again. It beeps. "Insufficient fu
 
 ..."one star is available"? You check the fuel tank; sure enough, a lone star sits at the bottom, awaiting its friends. Looks like you need to provide 49 yourself.
 
-You have enough stars to .
+If you like, you can .
 
-Although it hasn't changed, you can still [get your puzzle input](25/input).
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Let+It+Snow%22+%2D+Day+25+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F25&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, all that is left is for you to [admire your Advent calendar](/2015).
+
+If you still want to see it, you can [get your puzzle input](25/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Let+It+Snow%22+%2D+Day+25+%2D+Advent+of+Code+2015&url=https%3A%2F%2Fadventofcode%2Ecom%2F2015%2Fday%2F25&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
