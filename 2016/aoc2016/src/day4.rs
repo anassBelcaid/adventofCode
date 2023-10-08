@@ -90,8 +90,65 @@ pub fn part1(rooms: &Vec<String>) -> usize {
     return sum;
 }
 
+pub fn get_message(line: &str) -> String {
+    let mut result = String::new();
+
+    for c in line.chars() {
+        if c.is_digit(10) {
+            return result;
+        }
+
+        result.push(c);
+    }
+    result
+}
+pub fn decrypt(message: String, cypher: usize) -> String {
+    // function to decrypt the message
+    let cypher = cypher.rem_euclid(26);
+
+    let mut result = String::new();
+
+    for c in message.chars() {
+        if c == '-' {
+            result.push(' ');
+        } else {
+            let diff = (c as u8 - 'a' as u8 + cypher as u8) % 26;
+            let new_c = ('a' as u8 + diff) as char;
+            result.push(new_c);
+        }
+    }
+
+    result
+}
+pub fn part2() -> usize {
+    // the model mutate so I need to read the data again
+    let mut file = File::open("input/day4").expect("file day4 not found");
+    let mut lines = String::new();
+    let target = "northpole object storage ".to_string();
+
+    file.read_to_string(&mut lines).expect("invalid content");
+
+    // let mut results = Vec::new();
+
+    for line in lines.lines() {
+        let message = get_message(&line);
+        let mut room = Room::new(line);
+        if room.is_good() {
+            let decrypted = decrypt(message, room.id);
+            if decrypted == target {
+                return room.id;
+            }
+        }
+    }
+    0
+    // results
+}
+
 pub fn main() {
     let rooms = get_rooms();
     let answer1 = part1(&rooms);
     println!("answer1 is {answer1}");
+
+    let answer2 = part2();
+    println!("answer1 is {answer2}");
 }

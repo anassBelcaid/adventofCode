@@ -18,8 +18,6 @@ What is the *sum of the sector IDs of the real rooms*?
 
 Your puzzle answer was `185371`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -33,8 +31,12 @@ For example, the real name for `qzmt-zixmtkozy-ivhz-343` is `very encrypted name
 
 *What is the sector ID* of the room where North Pole objects are stored?
 
-Answer:
+Your puzzle answer was `984`.
 
-Although it hasn't changed, you can still [get your puzzle input](4/input).
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Security+Through+Obscurity%22+%2D+Day+4+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F4&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2016) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](4/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Security+Through+Obscurity%22+%2D+Day+4+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F4&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
