@@ -19,8 +19,6 @@ Given the actual Door ID, *what is the password*?
 
 Your puzzle answer was `d4cd2ee1`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -40,8 +38,12 @@ You almost choke on your popcorn as the final character falls into place, produc
 
 Given the actual Door ID and this new method, *what is the password*? Be extra proud of your solution if it uses a cinematic "decrypting" animation.
 
-Answer:
+Your puzzle answer was `f2c730e5`.
 
-Your puzzle input is still `ugkcyxxp`.
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22How+About+a+Nice+Game+of+Chess%3F%22+%2D+Day+5+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F5&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2016) and try another puzzle.
+
+Your puzzle input was `ugkcyxxp`.
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22How+About+a+Nice+Game+of+Chess%3F%22+%2D+Day+5+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F5&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.

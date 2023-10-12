@@ -30,3 +30,4 @@ path = 'src/day5.rs'
 [dependencies]
 
 md5 = "0.7.0"
+regex = "1.10.0"
