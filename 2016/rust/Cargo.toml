@@ -31,8 +31,12 @@ path = 'src/day5.rs'
 [[bin]]
 name = 'day6'
 path = 'src/day6.rs'
-[dependencies]
 
+[[bin]]
+name = 'day7'
+path = 'src/day7.rs'
+
+[dependencies]
 md5 = "0.7.0"
 regex = "1.10.0"
 nom = "7.1.3"
