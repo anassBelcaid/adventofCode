@@ -16,8 +16,6 @@ For example:
 
 Your puzzle answer was `115`.
 
-The first half of this puzzle is complete! It provides one gold star: \*
-
 \--- Part Two ---
 ----------
 
@@ -34,8 +32,12 @@ For example:
 
 *How many IPs* in your puzzle input support SSL?
 
-Answer:
+Your puzzle answer was `231`.
 
-Although it hasn't changed, you can still [get your puzzle input](7/input).
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Internet+Protocol+Version+7%22+%2D+Day+7+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F7&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+At this point, you should [return to your Advent calendar](/2016) and try another puzzle.
+
+If you still want to see it, you can [get your puzzle input](7/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Internet+Protocol+Version+7%22+%2D+Day+7+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F7&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
