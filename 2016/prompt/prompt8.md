@@ -51,8 +51,19 @@ As you can see, this display technology is extremely powerful, and will soon dom
 
 There seems to be an intermediate check of the voltage used by the display: after you swipe your card, if the screen did work, *how many pixels should be lit?*
 
-To begin, [get your puzzle input](8/input).
+Your puzzle answer was `106`.
+
+The first half of this puzzle is complete! It provides one gold star: \*
+
+\--- Part Two ---
+----------
+
+You notice that the screen is only capable of displaying capital letters; in the font it uses, each letter is `5` pixels wide and `6` tall.
+
+After you swipe your card, *what code is the screen trying to display?*
 
 Answer:
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Two%2DFactor+Authentication%22+%2D+Day+8+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F8&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+Although it hasn't changed, you can still [get your puzzle input](8/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Two%2DFactor+Authentication%22+%2D+Day+8+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F8&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
