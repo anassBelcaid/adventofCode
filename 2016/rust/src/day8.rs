@@ -13,8 +13,12 @@ fn part_i(lines: &String) -> i32 {
             }
         }
     }
+    // should just read the code
+    println!("{screen}");
+
     screen.num_lights()
 }
+
 pub fn main() {
     println!("lets counts those screen");
     // create the screen
