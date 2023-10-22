@@ -1,4 +1,5 @@
 pub mod lcdscreen;
+pub mod robots;
 // pub mod day2;
 // pub mod day3;
 // pub mod day4;
