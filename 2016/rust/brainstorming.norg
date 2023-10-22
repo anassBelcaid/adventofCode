@@ -1,0 +1,7 @@
+* Brainstorming
+
+  - How to model the **recurrent** relation with the **makrer**. keeping a a clean and sufficient implementation.
+  -   The best way I think it to work with **slices** since each token specifies the number of the next character to decode and how to multiply them.
+
+  - A key problem is how to mainpulate the data using the slices
+  - The function is definitely recursive and the range are a perfect idea to manipulate them. Now the key is check if they have a marker or not.
