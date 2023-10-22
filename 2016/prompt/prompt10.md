@@ -16,7 +16,7 @@ value 5 goes to bot 2
 bot 2 gives low to bot 1 and high to bot 0
 value 3 goes to bot 1
 bot 1 gives low to output 1 and high to bot 0
-bot 0 gives low to output 2 and high to output 0
+bot 0 gives low to output 2 and high to output [0](0)
 value 2 goes to bot 2
 
 ```
@@ -30,8 +30,17 @@ In the end, output bin `0` contains a value-`5` microchip, output bin `1` contai
 
 Based on your instructions, *what is the number of the bot* that is responsible for comparing value-`61` microchips with value-`17` microchips?
 
-To begin, [get your puzzle input](10/input).
+Your puzzle answer was `147`.
+
+The first half of this puzzle is complete! It provides one gold star: \*
+
+\--- Part Two ---
+----------
+
+What do you get if you *multiply together the values* of one chip in each of outputs `0`, `1`, and `2`?
 
 Answer:
 
-You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=%22Balance+Bots%22+%2D+Day+10+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F10&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
+Although it hasn't changed, you can still [get your puzzle input](10/input).
+
+You can also [Shareon [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+Part+One+of+%22Balance+Bots%22+%2D+Day+10+%2D+Advent+of+Code+2016&url=https%3A%2F%2Fadventofcode%2Ecom%2F2016%2Fday%2F10&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)] this puzzle.
