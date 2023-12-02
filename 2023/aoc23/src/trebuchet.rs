@@ -1,6 +1,3 @@
-use std::collections::HashMap;
-
-use regex::Regex;
 pub fn decrypt(line: &str) -> i32 {
     let pattern = regex::Regex::new(r"[0-9]").expect("invalid regex");
     let groupes: Vec<_> = pattern.find_iter(line).map(|x| x.as_str()).collect();
