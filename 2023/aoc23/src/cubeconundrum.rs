@@ -3,9 +3,9 @@ use std::i8::MAX;
 use nom::bytes::complete::tag;
 use nom::character::complete::{alpha1, space1};
 use nom::combinator::map_res;
-use nom::multi::{many1, separated_list1};
+use nom::multi::separated_list1;
 use nom::sequence::tuple;
-use nom::{character::complete::digit1, error::Error, sequence::preceded, IResult};
+use nom::{character::complete::digit1, sequence::preceded, IResult};
 
 #[derive(Debug)]
 pub struct Game {
