@@ -1,3 +1,4 @@
+pub mod boats;
 pub mod cubeconundrum;
 pub mod fertilizer;
 pub mod gearratio;
