@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::fmt::Display;
 
 use nom::character::complete::{digit1, space1};
 use nom::combinator::map_res;
@@ -19,6 +20,27 @@ pub enum Card {
     Q,
     K,
     A,
+}
+impl Display for Card {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::TWO => write!(f, "2")?,
+            Self::THREE => write!(f, "3")?,
+            Self::FOUR => write!(f, "4")?,
+            Self::FIVE => write!(f, "5")?,
+            Self::SIX => write!(f, "6")?,
+            Self::SEVEN => write!(f, "7")?,
+            Self::EIGHT => write!(f, "8")?,
+            Self::NINE => write!(f, "9")?,
+            Self::T => write!(f, "T")?,
+            Self::J => write!(f, "J")?,
+            Self::Q => write!(f, "Q")?,
+            Self::K => write!(f, "K")?,
+            Self::A => write!(f, "A")?,
+        }
+
+        Ok(())
+    }
 }
 
 impl Card {
@@ -56,8 +78,20 @@ pub enum Rank {
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct Hand {
-    pub bidding: i32,
+    pub bidding: i64,
     cards: Vec<Card>,
+}
+
+impl Display for Hand {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "[{}{}{}{}{}]",
+            self.cards[0], self.cards[1], self.cards[2], self.cards[3], self.cards[4]
+        )?;
+
+        Ok(())
+    }
 }
 
 impl PartialOrd for Hand {
@@ -128,7 +162,7 @@ impl Hand {
         let (rest, _) = space1(rest)?;
 
         // parsing the rest
-        let (rest, bidding) = map_res(digit1, str::parse::<i32>)(rest)?;
+        let (rest, bidding) = map_res(digit1, str::parse::<i64>)(rest)?;
         let hand = Hand { bidding, cards };
         Ok((rest, hand))
     }
