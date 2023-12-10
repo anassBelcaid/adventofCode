@@ -37,6 +37,23 @@ impl Garden {
         Ok((rest, garden))
     }
 
+    pub fn reverse_map(&self, value: i64, map_index: usize) -> i64 {
+        // function to get the reverse value of a given position
+        let matrix = &self.maps[map_index];
+
+        // loop ove the maps
+        for row in matrix.iter() {
+            // computing the diff
+            let diff = value - row[0];
+
+            if diff >= 0 && diff < row[2] {
+                return diff + row[1];
+            }
+        }
+
+        // in case no match we return the value
+        value
+    }
     pub fn value_at_map(&self, value: i64, map_index: usize) -> i64 {
         // function to get the value of [value] in the map indexed by [map_index]
         //
@@ -79,6 +96,28 @@ impl Garden {
     pub fn sort_sections(&mut self) {
         for section in self.maps.iter_mut() {
             section.sort_unstable_by_key(|row| row[1]);
+        }
+    }
+    pub fn is_seed(&self, seed: i64) -> bool {
+        // function to verify if a given seed is correct
+        for range in self.seeds.chunks(2) {
+            if seed >= range[0] && seed < range[0] + range[1] {
+                return true;
+            }
+        }
+        false
+    }
+
+    pub fn location_seed(&self, location: i64) -> Option<i64> {
+        // function to get if we get the reverse location
+        let mut value = location;
+        for index in (0..self.maps.len()).rev() {
+            value = self.reverse_map(value, index);
+        }
+
+        match self.is_seed(value) {
+            true => Some(value),
+            false => None,
         }
     }
     pub fn seed_soil_number(&self, seed: i64) -> i64 {
