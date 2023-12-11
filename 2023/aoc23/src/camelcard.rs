@@ -7,6 +7,7 @@ use nom::{character::complete::alphanumeric1, IResult};
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Clone)]
 pub enum Card {
+    J,
     TWO,
     THREE,
     FOUR,
@@ -16,7 +17,6 @@ pub enum Card {
     EIGHT,
     NINE,
     T,
-    J,
     Q,
     K,
     A,
@@ -133,13 +133,28 @@ impl Hand {
     pub fn rank(&self) -> Rank {
         // first we create the map
         let mut counts: HashMap<Card, usize> = HashMap::new();
+        let mut jokers = 0;
+
+        // the jokers need to be counted apart
         for card in self.cards.iter() {
-            *counts.entry(card.clone()).or_default() += 1;
+            if card != &Card::J {
+                *counts.entry(card.clone()).or_default() += 1;
+            } else {
+                jokers += 1;
+            }
         }
 
         let mut counts: Vec<usize> = counts.iter().map(|(_, v)| *v).collect();
         counts.sort();
         // checking for five kind
+
+        // now we add the jokers at the end to increaes the most existent ones
+        if jokers == 5 {
+            return Rank::FIVEKIND;
+        } else {
+            let n = counts.len();
+            counts[n - 1] += jokers;
+        }
 
         match counts[..] {
             [5] => Rank::FIVEKIND,
