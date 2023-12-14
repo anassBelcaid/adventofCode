@@ -3,6 +3,7 @@ pub mod camelcard;
 pub mod cubeconundrum;
 pub mod fertilizer;
 pub mod gearratio;
+pub mod maze;
 pub mod mirage;
 pub mod scratchcard;
 pub mod trebuchet;
