@@ -4,6 +4,7 @@ pub mod cosmicexpansion;
 pub mod cubeconundrum;
 pub mod fertilizer;
 pub mod gearratio;
+pub mod hotspring;
 pub mod maze;
 pub mod mirage;
 pub mod scratchcard;
