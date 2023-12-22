@@ -1,6 +1,3 @@
 pub mod lcdscreen;
+pub mod radiology;
 pub mod robots;
-// pub mod day2;
-// pub mod day3;
-// pub mod day4;
-// pub mod day5;
