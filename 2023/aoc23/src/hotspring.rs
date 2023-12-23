@@ -7,7 +7,7 @@ use nom::{
 };
 
 // Cache type for the dp computation in the num of ways
-type Cache = Vec<Vec<i32>>;
+type Cache = Vec<Vec<i64>>;
 
 #[derive(Debug)]
 pub struct Spring {
@@ -16,11 +16,22 @@ pub struct Spring {
 }
 
 impl Spring {
+    pub fn fold(&mut self) {
+        // function to fold the values 5 times
+        let initial_config = self.config.clone();
+        self.description.push('?');
+        let initial_des = self.description.clone();
+        for _ in 0..4 {
+            self.config.extend(initial_config.clone());
+            self.description.extend(initial_des.clone());
+        }
+        self.description.pop();
+    }
     pub fn is_spring(c: char) -> bool {
         return c == '#';
     }
 
-    pub fn num_ways(&self) -> usize {
+    pub fn num_ways(&self) -> i64 {
         // compute the number of ways we could fill the unknons
         // ? values by either a spring or empty
 
@@ -49,11 +60,9 @@ impl Spring {
             dp[i][0] = 0; // we attain the end of the string but still have some items left
         }
 
-        let val = self.compute_value(n, m, &mut dp) as usize;
-
-        val
+        self.compute_value(n, m, &mut dp)
     }
-    fn compute_value(&self, item: usize, index: usize, dp: &mut Cache) -> i32 {
+    fn compute_value(&self, item: usize, index: usize, dp: &mut Cache) -> i64 {
         // function to compute the dp value
 
         // println!("call with index = {index} \t item = {item}");
