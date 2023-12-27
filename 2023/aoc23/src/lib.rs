@@ -7,6 +7,7 @@ pub mod gearratio;
 pub mod hotspring;
 pub mod maze;
 pub mod mirage;
+pub mod mirrorvalley;
 pub mod scratchcard;
 pub mod trebuchet;
 pub mod wasteland;

@@ -56,10 +56,16 @@ path = 'src/day11.rs'
 name = 'day12'
 path = 'src/day12.rs'
 
+
+[[bin]]
+name = 'day13'
+path = 'src/day13.rs'
+
 [dependencies]
 regex = "1.10.2"
 lazy_static = "1.4.0"
 nom = "7.1.3"
 num-integer = "0.1.45"
+rstest = "0.18.2"
 
 
